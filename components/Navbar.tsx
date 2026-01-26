@@ -16,34 +16,31 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-lg py-1' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/80 backdrop-blur-2xl border-b border-white/20 shadow-xl py-2' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* Logo Oficial - Top Left */}
+          {/* Logo Oficial - Máxima Visibilidad */}
           <div className="flex-shrink-0">
             <a 
               href={`#${SectionId.Hero}`} 
-              className="flex items-center transition-all duration-300 hover:scale-105 active:scale-95"
+              className="flex items-center transition-all duration-300 hover:scale-110 active:scale-95 group"
               onClick={() => setIsOpen(false)}
             >
               <img 
                 src="logo.png" 
                 alt="ProWeb Inginiru & Consulting" 
-                className={`transition-all duration-500 ${scrolled ? 'h-14 md:h-16' : 'h-20 md:h-24'} w-auto object-contain`}
-                style={{ 
-                  filter: scrolled ? 'none' : 'drop-shadow(0 4px 6px rgba(0,0,0,0.15))' 
-                }}
+                className={`transition-all duration-500 ${scrolled ? 'h-20 md:h-24' : 'h-32 md:h-40'} w-auto object-contain drop-shadow-[0_8px_12px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_12px_20px_rgba(59,130,246,0.3)]`}
               />
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-10 items-center">
+          <div className="hidden lg:flex space-x-12 items-center">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-bold text-xs uppercase tracking-[0.2em] transition-all duration-300 ${scrolled ? 'text-blue-950 hover:text-blue-600' : 'text-slate-900 hover:text-blue-700'}`}
+                className={`font-black text-xs uppercase tracking-[0.25em] transition-all duration-300 ${scrolled ? 'text-blue-950 hover:text-blue-600' : 'text-slate-900 hover:text-blue-700 hover:drop-shadow-sm'}`}
               >
                 {link.name}
               </a>
@@ -52,9 +49,9 @@ const Navbar: React.FC = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-blue-950 to-blue-600 text-white px-8 py-3 rounded-xl flex items-center gap-3 hover:shadow-2xl hover:shadow-blue-500/30 transition-all transform hover:-translate-y-0.5 font-black text-xs uppercase tracking-widest"
+              className="bg-gradient-to-r from-blue-950 via-blue-800 to-blue-600 text-white px-10 py-4 rounded-2xl flex items-center gap-3 hover:shadow-[0_15px_30px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1 font-black text-xs uppercase tracking-widest border border-white/10"
             >
-              <MessageCircle size={18} className="text-green-400" />
+              <MessageCircle size={20} className="text-green-400" />
               <span>Contactar</span>
             </a>
           </div>
@@ -63,7 +60,7 @@ const Navbar: React.FC = () => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-900 hover:text-blue-600 p-2 transition-transform active:scale-90"
+              className="text-slate-900 hover:text-blue-600 p-3 bg-white/50 backdrop-blur-md rounded-xl border border-white/50 shadow-lg transition-transform active:scale-90"
               aria-label="Menú"
             >
               {isOpen ? <X size={32} /> : <Menu size={32} />}
@@ -72,28 +69,28 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu con Glassmorphism */}
-      <div className={`lg:hidden absolute top-full left-0 right-0 bg-white/90 backdrop-blur-2xl shadow-2xl transition-all duration-500 ease-in-out transform ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0 pointer-events-none'}`}>
-        <div className="px-6 pt-4 pb-12 space-y-2 border-t border-slate-100/50">
+      {/* Mobile Menu con Glassmorphism Reforzado */}
+      <div className={`lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-3xl shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-all duration-500 ease-in-out transform ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0 pointer-events-none'}`}>
+        <div className="px-8 pt-6 pb-16 space-y-3 border-t border-slate-100/50">
           {NAV_LINKS.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block py-6 text-lg font-black text-slate-800 hover:text-blue-600 border-b border-slate-100/50 uppercase tracking-[0.15em]"
+              className="block py-6 text-xl font-black text-slate-800 hover:text-blue-600 border-b border-slate-100/50 uppercase tracking-[0.2em]"
             >
               {link.name}
             </a>
           ))}
-          <div className="pt-8">
+          <div className="pt-10">
             <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-gradient-to-r from-blue-950 to-blue-600 text-white px-6 py-6 rounded-2xl flex items-center justify-center gap-4 hover:brightness-110 transition-all shadow-xl shadow-blue-900/40"
+              className="w-full bg-gradient-to-r from-blue-950 to-blue-600 text-white px-8 py-7 rounded-3xl flex items-center justify-center gap-5 hover:brightness-110 transition-all shadow-2xl shadow-blue-900/40"
             >
-              <MessageCircle size={28} className="text-green-400" />
-              <span className="font-black text-xl uppercase tracking-wider">Asesoría Directa</span>
+              <MessageCircle size={32} className="text-green-400" />
+              <span className="font-black text-2xl uppercase tracking-widest">Asesoría Directa</span>
             </a>
           </div>
         </div>
