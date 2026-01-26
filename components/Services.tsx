@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SectionId, WHATSAPP_LINK } from '../constants';
+import { SectionId, WHATSAPP_LINKS } from '../constants';
 import { HardHat, Globe, FileText, BarChart3, Search, Zap, MousePointer2, Smartphone } from 'lucide-react';
 
 const Services: React.FC = () => {
@@ -8,7 +8,7 @@ const Services: React.FC = () => {
     <section id={SectionId.Services} className="py-24 bg-slate-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">Áreas de Servicio</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4 uppercase">Áreas de Servicio</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">Soluciones integrales que combinan soporte técnico profesional con herramientas digitales modernas.</p>
         </div>
 
@@ -16,10 +16,10 @@ const Services: React.FC = () => {
           {/* Engineering Services */}
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-blue-900 rounded-2xl text-white">
+              <div className="p-3 bg-[#1a2b4c] rounded-2xl text-white">
                 <HardHat size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-blue-950">Ingeniería y Soporte Técnico</h3>
+              <h3 className="text-2xl font-bold text-blue-950 uppercase">Ingeniería y Soporte</h3>
             </div>
             
             <div className="grid gap-6">
@@ -43,12 +43,12 @@ const Services: React.FC = () => {
             
             <div className="mt-10 pt-8 border-t border-slate-100 text-center lg:text-left">
                <a 
-                href={WHATSAPP_LINK}
+                href={WHATSAPP_LINKS.ENGINEERING}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-600 font-bold hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 text-[#1a2b4c] font-bold uppercase tracking-tight hover:gap-4 transition-all"
                >
-                 Consultar por Ingeniería <Zap size={18} />
+                 Consultar por Ingeniería <Zap size={18} className="text-cyan-500" />
                </a>
             </div>
           </div>
@@ -56,10 +56,10 @@ const Services: React.FC = () => {
           {/* Tech Services */}
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 transition-all hover:shadow-md">
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-slate-900 rounded-2xl text-white">
+              <div className="p-3 bg-cyan-500 rounded-2xl text-white">
                 <Globe size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-blue-950">Tecnología y Páginas Web</h3>
+              <h3 className="text-2xl font-bold text-blue-950 uppercase">Tecnología y Web</h3>
             </div>
             
             <div className="grid gap-6">
@@ -70,7 +70,7 @@ const Services: React.FC = () => {
                 { title: "Diseño Adaptable (Mobile-First)", desc: "Visualización perfecta en celulares, tablets y computadoras.", icon: Smartphone },
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start group">
-                  <div className="mt-1 p-1 rounded-md bg-slate-100 text-slate-700 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                  <div className="mt-1 p-1 rounded-md bg-cyan-50 text-cyan-600 group-hover:bg-cyan-500 group-hover:text-white transition-colors">
                     <item.icon size={20} />
                   </div>
                   <div>
@@ -83,10 +83,10 @@ const Services: React.FC = () => {
 
             <div className="mt-10 pt-8 border-t border-slate-100 text-center lg:text-left">
                <a 
-                href={WHATSAPP_LINK}
+                href={WHATSAPP_LINKS.WEB}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-slate-900 font-bold hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 text-cyan-600 font-bold uppercase tracking-tight hover:gap-4 transition-all"
                >
                  Consultar por Web <Zap size={18} />
                </a>

@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, MessageCircle } from 'lucide-react';
-import { WHATSAPP_LINK, NAV_LINKS, SectionId } from '../constants';
+import { Menu, X } from 'lucide-react';
+import { NAV_LINKS, SectionId } from '../constants';
+import ActionButton from './ActionButton';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/80 backdrop-blur-2xl border-b border-white/20 shadow-xl py-2' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* Logo en Texto - Restaurado y Mejorado */}
+          {/* Logo en Texto */}
           <div className="flex-shrink-0">
             <a 
               href={`#${SectionId.Hero}`} 
@@ -46,15 +47,10 @@ const Navbar: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-blue-950 via-blue-800 to-blue-600 text-white px-10 py-4 rounded-2xl flex items-center gap-3 hover:shadow-[0_15px_30px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1 font-black text-xs uppercase tracking-widest border border-white/10"
-            >
-              <MessageCircle size={20} className="text-green-400" />
-              <span>Contactar</span>
-            </a>
+            <ActionButton 
+              label="Contactar" 
+              className="bg-gradient-to-r from-blue-950 to-blue-600 text-white px-8 py-3.5 rounded-2xl font-black text-xs uppercase tracking-widest border border-white/10"
+            />
           </div>
 
           {/* Mobile Toggle */}
@@ -70,7 +66,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu con Glassmorphism Reforzado */}
+      {/* Mobile Menu */}
       <div className={`lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-3xl shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-all duration-500 ease-in-out transform ${isOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0 pointer-events-none'}`}>
         <div className="px-8 pt-6 pb-16 space-y-3 border-t border-slate-100/50">
           {NAV_LINKS.map((link) => (
@@ -83,16 +79,12 @@ const Navbar: React.FC = () => {
               {link.name}
             </a>
           ))}
-          <div className="pt-10">
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-gradient-to-r from-blue-950 to-blue-600 text-white px-8 py-7 rounded-3xl flex items-center justify-center gap-5 hover:brightness-110 transition-all shadow-2xl shadow-blue-900/40"
-            >
-              <MessageCircle size={32} className="text-green-400" />
-              <span className="font-black text-2xl uppercase tracking-widest">Asesoría Directa</span>
-            </a>
+          <div className="pt-10 flex flex-col items-center">
+            <ActionButton 
+              label="Asesoría Directa" 
+              isFullWidth={true}
+              className="w-full bg-gradient-to-r from-blue-950 to-blue-600 text-white px-8 py-6 rounded-3xl font-black text-xl uppercase tracking-widest shadow-2xl shadow-blue-900/40"
+            />
           </div>
         </div>
       </div>
