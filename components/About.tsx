@@ -17,11 +17,11 @@ const About: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <p className="text-slate-700 leading-relaxed text-lg">
-              Somos un equipo multidisciplinario liderado por profesionales en ingeniería y expertos en tecnología. Nuestro perfil institucional se basa en la excelencia técnica y la transparencia operativa. Nos especializamos en brindar soporte técnico especializado y en la creación de activos digitales de alto rendimiento.
+            <p className="text-slate-700 leading-relaxed text-lg font-medium">
+              Somos un equipo multidisciplinario con amplia trayectoria en el <span className="text-cyan-500 font-bold">Callejón de Huaylas y Conchucos</span>. Combinamos la excelencia técnica con el conocimiento profundo de nuestra región para crear activos digitales de alto rendimiento.
             </p>
             <p className="text-slate-700 leading-relaxed text-lg">
-              Actuamos bajo principios éticos sólidos, enfocándonos en la calidad de la consultoría y la eficiencia en la ejecución. No somos simplemente una agencia de desarrollo; somos consultores que entienden la estructura técnica y el modelo de negocio de nuestros clientes.
+              Nuestro perfil institucional se basa en la excelencia técnica y la transparencia operativa. Nos especializamos en brindar soporte técnico especializado y en la creación de activos digitales de alto rendimiento que impulsan el desarrollo local.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
@@ -31,7 +31,7 @@ const About: React.FC = () => {
               </div>
               <div className="flex items-center gap-4 p-5 bg-slate-50 rounded-2xl border border-slate-100">
                 <Target className="text-blue-600" size={28} />
-                <span className="text-sm font-bold text-slate-800 uppercase tracking-wide">Enfoque Técnico</span>
+                <span className="text-sm font-bold text-slate-800 uppercase tracking-wide">Enfoque Regional</span>
               </div>
             </div>
           </div>

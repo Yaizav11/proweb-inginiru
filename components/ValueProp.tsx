@@ -22,7 +22,7 @@ const ValueProp: React.FC = () => {
     },
     {
       title: "Atención Directa",
-      desc: "Personalización total en la asesoría, sin intermediarios ni demoras.",
+      desc: "Personalización total y respuesta rápida para clientes en Huari, Huaraz, Caraz y todo Áncash. Sin intermediarios, trato directo con ingenieros expertos.",
       icon: CheckCircle2
     }
   ];
@@ -39,8 +39,8 @@ const ValueProp: React.FC = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, idx) => (
-            <div key={idx} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors">
-              <benefit.icon className="text-blue-400 mb-6" size={40} />
+            <div key={idx} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors group">
+              <benefit.icon className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform" size={40} />
               <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>
               <p className="text-blue-100/60 text-sm leading-relaxed">{benefit.desc}</p>
             </div>
