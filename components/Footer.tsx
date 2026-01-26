@@ -8,18 +8,13 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-100 border-t border-slate-200 pt-24 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start gap-16 mb-20">
-          {/* Logo y Branding Consistente */}
+          {/* Branding de Texto Restaurado */}
           <div className="flex flex-col gap-8">
-            <a href={`#${SectionId.Hero}`} className="inline-block transition-transform hover:scale-110">
-              <img 
-                src="logo.png" 
-                alt="ProWeb Inginiru & Consulting Logo" 
-                className="h-40 md:h-48 w-auto object-contain drop-shadow-xl"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                }}
-              />
+            <a href={`#${SectionId.Hero}`} className="inline-block transition-transform hover:scale-105 group">
+              <div className="flex flex-col leading-none">
+                <span className="text-4xl font-black text-blue-950 tracking-tighter uppercase">ProWeb</span>
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-[0.3em] mt-1 group-hover:text-blue-600 transition-colors">Injiniru & Consulting</span>
+              </div>
             </a>
             <div className="max-w-sm text-slate-600 text-sm leading-relaxed font-bold uppercase tracking-widest opacity-80">
               Consultoría de élite en ingeniería técnica y desarrollo de activos digitales inteligentes. Elevamos el estándar de su presencia empresarial.

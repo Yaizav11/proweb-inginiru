@@ -19,18 +19,19 @@ const Navbar: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/80 backdrop-blur-2xl border-b border-white/20 shadow-xl py-2' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* Logo Oficial - Máxima Visibilidad */}
+          {/* Logo en Texto - Restaurado y Mejorado */}
           <div className="flex-shrink-0">
             <a 
               href={`#${SectionId.Hero}`} 
-              className="flex items-center transition-all duration-300 hover:scale-110 active:scale-95 group"
+              className="flex flex-col leading-none transition-all duration-300 hover:scale-105 active:scale-95 group"
               onClick={() => setIsOpen(false)}
             >
-              <img 
-                src="logo.png" 
-                alt="ProWeb Inginiru & Consulting" 
-                className={`transition-all duration-500 ${scrolled ? 'h-20 md:h-24' : 'h-32 md:h-40'} w-auto object-contain drop-shadow-[0_8px_12px_rgba(0,0,0,0.2)] group-hover:drop-shadow-[0_12px_20px_rgba(59,130,246,0.3)]`}
-              />
+              <span className={`font-black uppercase tracking-tighter transition-all duration-500 ${scrolled ? 'text-2xl md:text-3xl' : 'text-3xl md:text-4xl'} text-blue-950`}>
+                ProWeb
+              </span>
+              <span className={`font-bold uppercase tracking-[0.3em] transition-all duration-500 ${scrolled ? 'text-[7px] md:text-[8px]' : 'text-[9px] md:text-[10px]'} text-slate-500 mt-0.5 group-hover:text-blue-600`}>
+                Injiniru & Consulting
+              </span>
             </a>
           </div>
 

@@ -24,11 +24,11 @@ const Hero: React.FC = () => {
               Ingeniería + Desarrollo Web IA
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1] tracking-tight">
-              Ingeniería que <br />
-              <span className="text-blue-500 inline-block transform hover:scale-105 transition-transform duration-300 drop-shadow-sm">RESPALDA</span>, <br />
-              <span className="text-slate-800 font-light italic">tecnología que</span> <br />
-              <span className="text-blue-500 inline-block transform hover:scale-105 transition-transform duration-300 drop-shadow-sm">GENERA CLIENTES</span>.
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tighter uppercase">
+              INGENIERÍA QUE <br />
+              <span className="text-blue-500 inline-block drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] transform hover:scale-105 transition-transform duration-300">RESPALDA</span>. <br />
+              TECNOLOGÍA QUE <br />
+              <span className="text-blue-500 inline-block drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] transform hover:scale-105 transition-transform duration-300">GENERA CLIENTES</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed opacity-90">
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-blue-950 to-blue-600 text-white px-12 py-6 rounded-2xl flex items-center justify-center gap-4 hover:brightness-110 transition-all transform hover:scale-105 hover:rotate-1 shadow-[0_20px_40px_rgba(30,58,138,0.3)] font-black text-xl"
+                className="bg-gradient-to-r from-blue-950 to-blue-600 text-white px-12 py-6 rounded-2xl flex items-center justify-center gap-4 hover:brightness-110 transition-all transform hover:scale-105 hover:rotate-1 shadow-[0_20px_40px_rgba(30,58,138,0.3)] font-black text-xl uppercase tracking-wider"
               >
                 <MessageCircle size={28} />
                 Asesoría Gratuita
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
                   <div className="bg-blue-600 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 text-white shadow-lg">
                     <ShieldCheck size={28} />
                   </div>
-                  <p className="text-base font-black text-blue-950 uppercase tracking-tighter">Seguridad Técnica</p>
+                  <p className="text-base font-black text-blue-950 uppercase tracking-tighter leading-tight">Seguridad Técnica</p>
                   <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Calidad Certificada</p>
                </div>
                
@@ -82,14 +82,10 @@ const Hero: React.FC = () => {
                   <div className="bg-blue-500 w-12 h-12 rounded-2xl flex items-center justify-center mb-4 text-white shadow-lg shadow-blue-500/40">
                     <Cpu size={28} />
                   </div>
-                  <p className="text-base font-black uppercase tracking-tighter">IA Aplicada</p>
+                  <p className="text-base font-black uppercase tracking-tighter leading-tight">IA Aplicada</p>
                   <p className="text-[10px] text-blue-200 font-bold uppercase tracking-widest mt-1">Conversión Máxima</p>
                </div>
             </div>
-            
-            {/* Decoración extra */}
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl -z-10 animate-pulse" />
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-900/20 rounded-full blur-3xl -z-10" />
           </div>
         </div>
       </div>
