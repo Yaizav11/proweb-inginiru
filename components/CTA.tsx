@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { MessageCircle, ArrowRight } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+import ActionButton from './ActionButton';
 
 const CTA: React.FC = () => {
   return (
@@ -19,16 +18,14 @@ const CTA: React.FC = () => {
             <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto font-light">
               Solicita hoy mismo una asesoría personalizada. Sea ingeniería o desarrollo web, tenemos la solución que necesitas.
             </p>
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-4 bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-xl hover:bg-blue-50 transition-all transform hover:scale-105 active:scale-95 shadow-xl"
-            >
-              <MessageCircle size={28} />
-              Hablar con un Consultor
-              <ArrowRight size={24} />
-            </a>
+            
+            <div className="flex justify-center">
+              <ActionButton 
+                label="Hablar con un Consultor" 
+                className="bg-white text-blue-600 px-10 py-5 rounded-full font-bold text-xl hover:bg-blue-50 transition-all transform hover:scale-105 active:scale-95 shadow-xl"
+              />
+            </div>
+            
             <p className="mt-8 text-blue-200 text-sm font-medium">Respuesta rápida y personalizada por WhatsApp</p>
           </div>
         </div>

@@ -2,6 +2,7 @@
 import React from 'react';
 import { SectionId } from '../constants';
 import { CheckCircle2, Zap, Layout, Shield } from 'lucide-react';
+import ActionButton from './ActionButton';
 
 const ValueProp: React.FC = () => {
   const benefits = [
@@ -37,7 +38,7 @@ const ValueProp: React.FC = () => {
           <p className="text-blue-200/70 max-w-2xl mx-auto">¿Por qué elegir a ProWeb Inginiru & Consulting?</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {benefits.map((benefit, idx) => (
             <div key={idx} className="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-colors group">
               <benefit.icon className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform" size={40} />
@@ -45,6 +46,13 @@ const ValueProp: React.FC = () => {
               <p className="text-blue-100/60 text-sm leading-relaxed">{benefit.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center">
+          <ActionButton 
+            label="Elegir Mi Plan" 
+            className="bg-cyan-500 text-white px-10 py-5 rounded-2xl font-black text-lg uppercase tracking-wider"
+          />
         </div>
       </div>
     </section>

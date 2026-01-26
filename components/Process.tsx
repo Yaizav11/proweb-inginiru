@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { SectionId } from '../constants';
+import ActionButton from './ActionButton';
 
 const Process: React.FC = () => {
   const steps = [
@@ -34,7 +35,7 @@ const Process: React.FC = () => {
           <p className="text-slate-600">Simplicidad, rigor y eficiencia en cada etapa.</p>
         </div>
 
-        <div className="relative">
+        <div className="relative mb-20">
           {/* Connector Line (Desktop) */}
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-slate-100 -translate-y-1/2 z-0"></div>
           
@@ -49,6 +50,13 @@ const Process: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="flex justify-center">
+          <ActionButton 
+            label="Comenzar Ahora" 
+            className="bg-blue-950 text-white px-10 py-5 rounded-2xl font-black text-lg uppercase tracking-wider"
+          />
         </div>
       </div>
     </section>

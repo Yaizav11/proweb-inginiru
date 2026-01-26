@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { MessageCircle, ShieldCheck, Cpu } from 'lucide-react';
-import { WHATSAPP_LINK, SectionId } from '../constants';
+import { ShieldCheck, Cpu } from 'lucide-react';
+import { SectionId } from '../constants';
+import ActionButton from './ActionButton';
 
 const Hero: React.FC = () => {
   return (
@@ -36,17 +37,12 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-4">
-              <a
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-blue-950 to-blue-600 text-white px-12 py-6 rounded-2xl flex items-center justify-center gap-4 hover:brightness-110 transition-all transform hover:scale-105 hover:rotate-1 shadow-[0_20px_40px_rgba(30,58,138,0.3)] font-black text-xl uppercase tracking-wider"
-              >
-                <MessageCircle size={28} />
-                Asesoría Gratuita
-              </a>
+              <ActionButton 
+                label="Asesoría Gratuita" 
+                className="bg-gradient-to-r from-blue-950 to-blue-600 text-white px-12 py-6 rounded-2xl font-black text-xl uppercase tracking-wider"
+              />
               
-              <div className="flex items-center justify-center gap-8 px-8 bg-white/40 backdrop-blur-xl rounded-2xl border border-white/60 shadow-xl shadow-slate-200/50">
+              <div className="flex items-center justify-center gap-8 px-8 bg-white/40 backdrop-blur-xl rounded-2xl border border-white/60 shadow-xl shadow-slate-200/50 min-h-[80px]">
                 <div className="flex flex-col items-center lg:items-start">
                   <span className="text-blue-950 font-black text-2xl tracking-tighter">+100</span>
                   <span className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Proyectos</span>
