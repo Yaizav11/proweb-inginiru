@@ -24,11 +24,11 @@ const Hero: React.FC = () => {
               Ingeniería + Desarrollo Web IA
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tighter uppercase">
-              INGENIERÍA QUE <br />
-              <span className="text-blue-500 inline-block drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] transform hover:scale-105 transition-transform duration-300">RESPALDA</span>. <br />
-              TECNOLOGÍA QUE <br />
-              <span className="text-blue-500 inline-block drop-shadow-[0_0_15px_rgba(59,130,246,0.4)] transform hover:scale-105 transition-transform duration-300">GENERA CLIENTES</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
+              <span className="font-bold text-blue-950 uppercase">INGENIERÍA</span> <br />
+              <span className="font-medium text-cyan-500 lowercase">que respalda</span>.<br />
+              <span className="font-bold text-blue-950 uppercase">TECNOLOGÍA</span> <br />
+              <span className="font-medium text-cyan-500 lowercase">que genera clientes</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed opacity-90">
